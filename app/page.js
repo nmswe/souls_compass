@@ -23,7 +23,7 @@ export default function Home() {
         <div className="text-center mb-4">
           <p className="text-[#2D2D3F] text-lg font-semibold mb-2">🧭</p>
           <p className="text-sm text-[#4A4A5E] italic">
-            "Nel deserto dell'anima, ogni incontro è una stella"
+            "Nel deserto delle anime, ogni incontro è una stella"
           </p>
         </div>
 

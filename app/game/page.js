@@ -24,7 +24,7 @@ export default function GamePage() {
         <Card>
           <Title>Soul's Compass</Title>
           <div className="text-center mb-6">
-            <p className="text-2xl font-bold text-[#D97757] mb-2">✨ Pronto per iniziare? ✨</p>
+            <p className="text-2xl font-bold text-[#D97757] mb-2"> Pronto per iniziare? </p>
             <p className="text-[#4A4A5E] text-sm">Un viaggio attraverso 7 livelli di connessione</p>
             <div className="mt-4 p-4 bg-[#E8D4B8] rounded-lg border-2 border-[#D4AF37]">
               <p className="text-[#2D2D3F] font-semibold">❤️ 3 vite • 🎯 Affinità Universale</p>
@@ -158,7 +158,7 @@ export default function GamePage() {
                 <span className="text-sm font-semibold text-[#C4603F]">
                   {'❤️'.repeat(gameState.lives)}
                 </span>
-                <span className="text-sm font-semibold text-[#D4AF37]">
+                <span className="text-sm font-semibold">
                   ✓ {gameState.correctAnswers}
                 </span>
               </div>
