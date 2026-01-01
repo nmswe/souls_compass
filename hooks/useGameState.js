@@ -1,6 +1,7 @@
 // hooks/useGameState.js
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { questions, levels } from '@/data/questions';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Funzione helper per mescolare un array (Fisher-Yates shuffle)
 const shuffleArray = (array) => {
@@ -13,27 +14,29 @@ const shuffleArray = (array) => {
 };
 
 export function useGameState() {
+  const { language } = useLanguage(); // Aggiungi questo
+  
   const [gameState, setGameState] = useState({
     currentLevel: 0,
     lives: 3,
     correctAnswers: 0,
     currentQuestionIndex: 0,
     questionQueue: [],
-    isExplorer: true, // Chi sta rispondendo (true = player 1, false = player 2)
-    phase: 'waiting', // 'waiting' | 'answering' | 'guessing' | 'result' | 'gameOver'
+    isExplorer: true,
+    phase: 'waiting',
     selectedAnswer: null,
     guardianGuess: null,
   });
 
   // Inizializza la coda di domande per il livello corrente
   const initializeQuestionQueue = (levelId) => {
-    const level = levels[levelId];
+    const level = levels[language][levelId]; // Usa la lingua corretta
     const queue = [];
 
     // Mescola i pool di domande e prendi solo quelle necessarie
-    const shuffledEasy = shuffleArray(questions.easy);
-    const shuffledMedium = shuffleArray(questions.medium);
-    const shuffledHard = shuffleArray(questions.hard);
+    const shuffledEasy = shuffleArray(questions[language].easy); // Usa la lingua corretta
+    const shuffledMedium = shuffleArray(questions[language].medium);
+    const shuffledHard = shuffleArray(questions[language].hard);
 
     // Aggiungi domande facili randomiche
     for (let i = 0; i < level.easy; i++) {
@@ -83,7 +86,6 @@ export function useGameState() {
       
       if (isCorrect) {
         newCorrect++;
-        // Ogni 4 risposte corrette si guadagna una vita
         if (newCorrect % 4 === 0 && newLives < 6) {
           newLives++;
         }
@@ -92,7 +94,7 @@ export function useGameState() {
       }
 
       // Check se passare al prossimo livello
-      const nextLevel = levels.find(l => l.requiredCorrect === newCorrect);
+      const nextLevel = levels[language].find(l => l.requiredCorrect === newCorrect);
       
       return {
         ...prev,
@@ -110,15 +112,13 @@ export function useGameState() {
     setGameState(prev => {
       const nextIndex = prev.currentQuestionIndex + 1;
       
-      // Game over se vite finite
       if (prev.lives <= 0) {
         return { ...prev, phase: 'gameOver' };
       }
 
-      // Se abbiamo finito le domande del livello, inizia il prossimo
       if (nextIndex >= prev.questionQueue.length) {
         const nextLevelId = prev.currentLevel + 1;
-        if (nextLevelId < levels.length) {
+        if (nextLevelId < levels[language].length) {
           const queue = initializeQuestionQueue(nextLevelId);
           return {
             ...prev,
@@ -131,7 +131,6 @@ export function useGameState() {
             guardianGuess: null,
           };
         } else {
-          // Vittoria! Completato tutti i livelli
           return { ...prev, phase: 'victory' };
         }
       }
@@ -154,6 +153,6 @@ export function useGameState() {
     makeGuess,
     nextQuestion,
     currentQuestion: gameState.questionQueue[gameState.currentQuestionIndex],
-    currentLevelInfo: levels[gameState.currentLevel]
+    currentLevelInfo: levels[language][gameState.currentLevel]
   };
 }
