@@ -2,6 +2,16 @@
 import { useState, useEffect } from 'react';
 import { questions, levels } from '@/data/questions';
 
+// Funzione helper per mescolare un array (Fisher-Yates shuffle)
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export function useGameState() {
   const [gameState, setGameState] = useState({
     currentLevel: 0,
@@ -20,20 +30,26 @@ export function useGameState() {
     const level = levels[levelId];
     const queue = [];
 
-    // Aggiungi domande facili
+    // Mescola i pool di domande e prendi solo quelle necessarie
+    const shuffledEasy = shuffleArray(questions.easy);
+    const shuffledMedium = shuffleArray(questions.medium);
+    const shuffledHard = shuffleArray(questions.hard);
+
+    // Aggiungi domande facili randomiche
     for (let i = 0; i < level.easy; i++) {
-      queue.push({ ...questions.easy[i], difficulty: 'easy' });
+      queue.push({ ...shuffledEasy[i], difficulty: 'easy' });
     }
-    // Aggiungi domande medie
+    // Aggiungi domande medie randomiche
     for (let i = 0; i < level.medium; i++) {
-      queue.push({ ...questions.medium[i], difficulty: 'medium' });
+      queue.push({ ...shuffledMedium[i], difficulty: 'medium' });
     }
-    // Aggiungi domande difficili
+    // Aggiungi domande difficili randomiche
     for (let i = 0; i < level.hard; i++) {
-      queue.push({ ...questions.hard[i], difficulty: 'hard' });
+      queue.push({ ...shuffledHard[i], difficulty: 'hard' });
     }
 
-    return queue;
+    // Mescola anche l'ordine finale delle domande nel livello
+    return shuffleArray(queue);
   };
 
   // Avvia nuovo livello
