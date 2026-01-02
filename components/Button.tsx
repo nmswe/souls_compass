@@ -1,6 +1,12 @@
 // components/Button.js
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'success' | 'danger';
+  className?: string;
+}
 
-export default function Button({ children, onClick, variant = 'primary', className = '' }) {
+export default function Button({ children, onClick, variant = 'primary', className = '' }: ButtonProps) {  
   const baseStyles = "w-full font-semibold py-5 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 text-lg";
   
   const variants = {

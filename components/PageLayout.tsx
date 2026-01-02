@@ -1,6 +1,6 @@
 // components/PageLayout.js
 
-export default function PageLayout({ children }) {
+export default function PageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2D2D3F] via-[#4A4A5E] to-[#2D2D3F] flex items-center justify-center p-4 relative overflow-hidden">
       {/* Stelle di sfondo */}

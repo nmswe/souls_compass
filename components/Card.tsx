@@ -1,6 +1,6 @@
 // components/Card.js
 
-export default function Card({ children, className = '' }) {
+export default function Card({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`bg-[#F5E6D3] border-4 border-[#D4AF37] rounded-2xl p-10 max-w-lg w-full shadow-2xl relative ${className}`}>
       {/* Pattern geometrico sottile negli angoli */}

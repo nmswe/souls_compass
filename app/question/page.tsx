@@ -1,6 +1,5 @@
 'use client';
 
-import { useSearchParams, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import PageLayout from '@/components/PageLayout';
 import Card from '@/components/Card';
@@ -8,9 +7,6 @@ import Title from '@/components/Title';
 import Button from '@/components/Button';
 
 export default function QuestionPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const difficulty = searchParams.get('difficulty');
   
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
@@ -21,11 +17,6 @@ export default function QuestionPage() {
     { id: 'C', text: 'Risposta C' },
     { id: 'D', text: 'Risposta D' }
   ];
-
-  interface Answer {
-    id: string;
-    text: string;
-  }
 
   const handleAnswerSelect = (answerId: string): void => {
     setSelectedAnswer(answerId);

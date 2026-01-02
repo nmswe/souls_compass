@@ -1,8 +1,8 @@
 // components/Title.js
 
-export default function Title({ children, className = '', level = 0}) {
+export default function Title({ children, className = '', level = 0 }: { children: React.ReactNode; className?: string; level?: number }) {
   // Colori diversi per ogni livello
-  const levelColors = {
+  const levelColors: Record<number, string> = {
     0: 'from-[#E8D4B8] to-[#D4B896]', // Contatto - sabbia
     1: 'from-[#E8C547] to-[#D4AF37]', // Connessione - oro chiaro
     2: 'from-[#D4AF37] to-[#B8941F]', // Apertura - oro

@@ -1,32 +1,25 @@
 // contexts/LanguageContext.js
 'use client';
 
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('en');
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Carica la lingua salvata al mount
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('soulsCompassLanguage');
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'it')) {
-      setLanguage(savedLanguage);
+  const [language, setLanguage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('soulsCompassLanguage');
+      if (savedLanguage === 'en' || savedLanguage === 'it') {
+        return savedLanguage;
+      }
     }
-    setIsLoaded(true);
-  }, []);
+    return 'en';
+  });
 
   const toggleLanguage = (lang) => {
     setLanguage(lang);
     localStorage.setItem('soulsCompassLanguage', lang);
   };
-
-  // Non renderizzare finché non abbiamo caricato la lingua
-  if (!isLoaded) {
-    return null;
-  }
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage }}>
