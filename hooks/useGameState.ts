@@ -1,10 +1,29 @@
-// hooks/useGameState.js
+// hooks/useGameState.ts
 import { useState } from 'react';
 import { questions, levels } from '@/data/questions';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+interface Question {
+  id: string;
+  text: string;
+  answers: string[];
+  difficulty?: 'easy' | 'medium' | 'hard';
+}
+
+interface GameState {
+  currentLevel: number;
+  lives: number;
+  correctAnswers: number;
+  currentQuestionIndex: number;
+  questionQueue: Question[];
+  isExplorer: boolean;
+  phase: 'waiting' | 'answering' | 'guessing' | 'result' | 'gameOver' | 'victory';
+  selectedAnswer: string | null;
+  guardianGuess: string | null;
+}
+
 // Funzione helper per mescolare un array (Fisher-Yates shuffle)
-const shuffleArray = (array) => {
+const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -14,9 +33,9 @@ const shuffleArray = (array) => {
 };
 
 export function useGameState() {
-  const { language } = useLanguage(); // Aggiungi questo
-  
-  const [gameState, setGameState] = useState({
+  const { language } = useLanguage();
+
+  const [gameState, setGameState] = useState<GameState>({
     currentLevel: 0,
     lives: 3,
     correctAnswers: 0,
@@ -29,14 +48,15 @@ export function useGameState() {
   });
 
   // Inizializza la coda di domande per il livello corrente
-  const initializeQuestionQueue = (levelId) => {
-    const level = levels[language][levelId]; // Usa la lingua corretta
-    const queue = [];
+  const initializeQuestionQueue = (levelId: number): Question[] => {
+    const langKey = language as keyof typeof levels;
+    const level = levels[langKey][levelId];
+    const queue: Question[] = [];
 
     // Mescola i pool di domande e prendi solo quelle necessarie
-    const shuffledEasy = shuffleArray(questions[language].easy); // Usa la lingua corretta
-    const shuffledMedium = shuffleArray(questions[language].medium);
-    const shuffledHard = shuffleArray(questions[language].hard);
+    const shuffledEasy = shuffleArray(questions[langKey].easy);
+    const shuffledMedium = shuffleArray(questions[langKey].medium);
+    const shuffledHard = shuffleArray(questions[langKey].hard);
 
     // Aggiungi domande facili randomiche
     for (let i = 0; i < level.easy; i++) {
@@ -56,7 +76,7 @@ export function useGameState() {
   };
 
   // Avvia nuovo livello
-  const startLevel = (levelId) => {
+  const startLevel = (levelId: number) => {
     const queue = initializeQuestionQueue(levelId);
     setGameState(prev => ({
       ...prev,
@@ -68,7 +88,7 @@ export function useGameState() {
   };
 
   // Custode risponde
-  const answerQuestion = (answer) => {
+  const answerQuestion = (answer: string) => {
     setGameState(prev => ({
       ...prev,
       selectedAnswer: answer,
@@ -77,13 +97,14 @@ export function useGameState() {
   };
 
   // Esploratore indovina
-  const makeGuess = (guess) => {
+  const makeGuess = (guess: string) => {
     const isCorrect = guess === gameState.selectedAnswer;
-    
+    const langKey = language as keyof typeof levels;
+
     setGameState(prev => {
       let newCorrect = prev.correctAnswers;
       let newLives = prev.lives;
-      
+
       if (isCorrect) {
         newCorrect++;
         if (newCorrect % 4 === 0 && newLives < 6) {
@@ -94,8 +115,8 @@ export function useGameState() {
       }
 
       // Check se passare al prossimo livello
-      const nextLevel = levels[language].find(l => l.requiredCorrect === newCorrect);
-      
+      const nextLevel = levels[langKey].find(l => l.requiredCorrect === newCorrect);
+
       return {
         ...prev,
         guardianGuess: guess,
@@ -109,16 +130,18 @@ export function useGameState() {
 
   // Prossima domanda
   const nextQuestion = () => {
+    const langKey = language as keyof typeof levels;
+
     setGameState(prev => {
       const nextIndex = prev.currentQuestionIndex + 1;
-      
+
       if (prev.lives <= 0) {
         return { ...prev, phase: 'gameOver' };
       }
 
       if (nextIndex >= prev.questionQueue.length) {
         const nextLevelId = prev.currentLevel + 1;
-        if (nextLevelId < levels[language].length) {
+        if (nextLevelId < levels[langKey].length) {
           const queue = initializeQuestionQueue(nextLevelId);
           return {
             ...prev,
@@ -146,13 +169,15 @@ export function useGameState() {
     });
   };
 
+  const langKey = language as keyof typeof levels;
+
   return {
     gameState,
     startLevel,
     answerQuestion,
     makeGuess,
     nextQuestion,
-    currentQuestion: gameState.questionQueue[gameState.currentQuestionIndex],
-    currentLevelInfo: levels[language][gameState.currentLevel]
+    currentQuestion: gameState.questionQueue[gameState.currentQuestionIndex] as Question | undefined,
+    currentLevelInfo: levels[langKey][gameState.currentLevel]
   };
 }
