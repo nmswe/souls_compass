@@ -12,7 +12,7 @@ import Button from '@/components/Button';
 export default function InstructionsPage() {
   const router = useRouter();
   const { language } = useLanguage();
-  const t = translations[language as keyof typeof translations].home;
+  const t = translations[language as keyof typeof translations].instructions;
 
   return (
     <PageLayout>
