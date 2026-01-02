@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/page.js", "app/question/page.js", "app/game/page.js", "app/game/page.js"  ],
+, "app/page.tsx", "app/question/page.tsx", "app/game/page.tsx", "app/game/page.tsx"  ],
   "exclude": ["node_modules"]
 }
