@@ -11,7 +11,7 @@ Two players share one phone and take turns being the Guardian (who answers) and 
 ## ✨ Features
 
 - 🌍 **Bilingual**: Full support for English and Italian
-- 📱  **Mobile-first**: Optimized for phone gameplay
+-  📱  **Mobile-first**: Optimized for phone gameplay
 - 🎨 **Beautiful UI**: Warm, inviting desert-inspired design
 - 🔄 **Dynamic questions**: Randomized selection for replayability
 - 💾 **Persistent language**: Remembers your language preference
