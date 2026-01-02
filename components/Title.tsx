@@ -1,6 +1,6 @@
 // components/Title.js
 
-export default function Title({ children, className = '', level }) {
+export default function Title({ children, className = '', level = 0}) {
   // Colori diversi per ogni livello
   const levelColors = {
     0: 'from-[#E8D4B8] to-[#D4B896]', // Contatto - sabbia
