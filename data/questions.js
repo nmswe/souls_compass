@@ -173,6 +173,106 @@ export const questions = {
         text: 'Imagine that every time you drink a cup of coffee or tea, you could receive a small unexpected \'bonus\'. Would you prefer it to be:',
         answers: ['A flash of brilliant insight that solves a problem or opens a new perspective for you.', 'A sensation of deep serenity and mental clarity that makes you feel completely centered.']
       },
+      {
+        id: 'e35',
+        text: 'When you accomplish something difficult, do you celebrate immediately or do you move on to the next challenge?',
+        answers: ['I celebrate and savor the moment', 'I move on quickly to the next goal']
+      },
+      {
+        id: 'e36',
+        text: 'If you could master one artistic skill instantly, would you choose:',
+        answers: ['A visual art like painting or sculpture', 'A performing art like music or dance']
+      },
+      {
+        id: 'e37',
+        text: 'When you\'re planning a trip, do you prefer:',
+        answers: ['Research every detail and create a structured itinerary', 'Book the essentials and improvise the rest']
+      },
+      {
+        id: 'e38',
+        text: 'If you found extra money in your budget, would you rather:',
+        answers: ['Save it for future security', 'Invest it in an experience or something meaningful now']
+      },
+      {
+        id: 'e39',
+        text: 'When you see someone struggling with something you\'re good at, your instinct is to:',
+        answers: ['Offer help immediately', 'Wait to see if they ask, respecting their independence']
+      },
+      {
+        id: 'e40',
+        text: 'In a group project, do you naturally tend to:',
+        answers: ['Take the lead and coordinate', 'Contribute your part and support others\' ideas']
+      },
+      {
+        id: 'e41',
+        text: 'When you discover a new song you love, do you:',
+        answers: ['Listen to it on repeat until you absorb every detail', 'Add it to a playlist and let it come up naturally']
+      },
+      {
+        id: 'e42',
+        text: 'If you could spend a day with unlimited energy, would you:',
+        answers: ['Do as many activities and experiences as possible', 'Focus deeply on one meaningful project or experience']
+      },
+      {
+        id: 'e43',
+        text: 'When you\'re cooking or preparing food, do you:',
+        answers: ['Follow recipes precisely', 'Use recipes as inspiration but adjust to your taste']
+      },
+      {
+        id: 'e44',
+        text: 'If you had to choose between two hobbies, would you prefer:',
+        answers: ['Something that challenges your mind', 'Something that engages your body']
+      },
+      {
+        id: 'e45',
+        text: 'When you enter a new environment, do you notice first:',
+        answers: ['The people and social dynamics', 'The physical space and atmosphere']
+      },
+      {
+        id: 'e46',
+        text: 'If you could change one habit overnight, would you choose:',
+        answers: ['A habit that would improve your health', 'A habit that would improve your productivity']
+      },
+      {
+        id: 'e47',
+        text: 'When reading a book or watching a series, do you prefer:',
+        answers: ['Stories that mirror real life and feel authentic', 'Stories that take you to completely different worlds']
+      },
+      {
+        id: 'e48',
+        text: 'If you had a free afternoon with no obligations, would you rather:',
+        answers: ['Be around people, even if casually', 'Have time completely to yourself']
+      },
+      {
+        id: 'e49',
+        text: 'When you need to recharge, do you prefer:',
+        answers: ['Active rest (light exercise, walks, creative activities)', 'Complete rest (sleep, lying down, minimal activity)']
+      },
+      {
+        id: 'e50',
+        text: 'If you could live in any type of home, would you choose:',
+        answers: ['A cozy, intimate space that feels like a personal sanctuary', 'A spacious, open environment with room to grow and host']
+      },
+      {
+        id: 'e51',
+        text: 'When you\'re given a compliment, your typical reaction is:',
+        answers: ['Accept it graciously and take it to heart', 'Deflect or downplay it, feeling a bit uncomfortable']
+      },
+      {
+        id: 'e52',
+        text: 'If you could focus your learning for the next year on one area, would you choose:',
+        answers: ['Deepening knowledge in something you already know', 'Exploring something completely new to you']
+      },
+      {
+        id: 'e53',
+        text: 'When organizing your living space, do you prioritize:',
+        answers: ['Functionality and efficiency', 'Aesthetics and personal expression']
+      },
+      {
+        id: 'e54',
+        text: 'If you had to give advice to your younger self, would you focus on:',
+        answers: ['Things to do differently', 'Things to appreciate and embrace']
+      },
     ],
     
     medium: [
@@ -250,7 +350,108 @@ export const questions = {
         id: 'm15',
         text: 'What nourishes you more: silence or deep conversation?',
         answers: ['Silence', 'Deep conversation', 'Both depending on the moment']
-      }
+      },
+      {
+        id: 'm16',
+        text: 'When someone performs better than you at something, what do you feel most?',
+        answers: ['Genuine happiness for them', 'A spark of envy that motivates me to improve', 'Indifference, everyone has their path']
+      },
+      {
+        id: 'm17',
+        text: 'When you have free time and nothing planned, do you feel:',
+        answers: ['Restless, looking for something to do', 'Peaceful, enjoying the unstructured time', 'It depends on my energy level']
+      },
+      {
+        id: 'm18',
+        text: 'What\'s your relationship with physical pleasure (good food, comfort, relaxation)?',
+        answers: ['I embrace it fully and unapologetically', 'I enjoy it but with some moderation', 'I often deny myself to stay disciplined']
+      },
+      {
+        id: 'm19',
+        text: 'When you\'re attracted to someone, how do you typically respond?',
+        answers: ['I act on it and express my interest', 'I observe and wait for the right moment', 'I tend to hold back out of fear or caution']
+      },
+      {
+        id: 'm20',
+        text: 'Do you find it easier to forgive others or yourself?',
+        answers: ['Others', 'Myself', 'Neither comes easily']
+      },
+      {
+        id: 'm21',
+        text: 'When you feel anger rising, what do you do?',
+        answers: ['Express it in the moment', 'Step away and process it alone', 'Suppress it and move on']
+      },
+      {
+        id: 'm22',
+        text: 'How do you feel about asking for help when you need it?',
+        answers: ['Natural and easy', 'Difficult but I do it anyway', 'I avoid it as much as possible']
+      },
+      {
+        id: 'm23',
+        text: 'When making decisions, what weighs more heavily:',
+        answers: ['How it affects me', 'How it affects others', 'Both equally']
+      },
+      {
+        id: 'm24',
+        text: 'Do you tend to hold onto things (objects, memories, relationships) or let go easily?',
+        answers: ['I hold on', 'I let go easily', 'It depends what it is']
+      },
+      {
+        id: 'm25',
+        text: 'When someone shares good news with you, your immediate feeling is:',
+        answers: ['Pure joy for them', 'Joy mixed with comparison to my own life', 'Neutral, focused on being supportive']
+      },
+      {
+        id: 'm26',
+        text: 'How comfortable are you with being the center of attention?',
+        answers: ['I enjoy it', 'I tolerate it but prefer not to be', 'I actively avoid it']
+      },
+      {
+        id: 'm27',
+        text: 'When you commit to something, how do you approach it?',
+        answers: ['Full intensity until completion', 'Steady and consistent pace', 'In bursts when I feel motivated']
+      },
+      {
+        id: 'm28',
+        text: 'Do you feel more alive in moments of:',
+        answers: ['Peak excitement and intensity', 'Deep peace and contentment', 'Meaningful connection with others']
+      },
+      {
+        id: 'm29',
+        text: 'When facing your own flaws, do you:',
+        answers: ['Accept them as part of who you are', 'Work actively to change them', 'Struggle between acceptance and change']
+      },
+      {
+        id: 'm30',
+        text: 'What scares you more about relationships:',
+        answers: ['Losing my independence', 'Not being chosen or prioritized', 'The vulnerability required']
+      },
+      {
+        id: 'm31',
+        text: 'When you achieve success, do you attribute it more to:',
+        answers: ['Your own effort and talent', 'Good fortune and timing', 'Help and support from others']
+      },
+      {
+        id: 'm32',
+        text: 'How do you feel about your past self?',
+        answers: ['Compassionate and understanding', 'Critical of mistakes made', 'Distant, like a different person']
+      },
+      {
+        id: 'm33',
+        text: 'When someone criticizes you, what hurts most?',
+        answers: ['If there\'s truth in it', 'The way they deliver it', 'That they thought it at all']
+      },
+      {
+        id: 'm34',
+        text: 'In conflicts, do you prioritize:',
+        answers: ['Being right', 'Being understood', 'Resolving and moving forward']
+      },
+      {
+        id: 'm35',
+        text: 'When you look at your life trajectory, do you see:',
+        answers: ['Clear patterns and themes', 'Random events that shaped you', 'Deliberate choices leading somewhere']
+      },
+
     ],
 
     hard: [
@@ -328,7 +529,107 @@ export const questions = {
         id: 'h15',
         text: 'When you look in the mirror, what do you see most: who you are, who you\'d like to be, who you\'ve been or who others see?',
         answers: ['Who I am', 'Who I\'d like to be', 'Who I\'ve been', 'Who others see']
-      }
+      },
+      {
+        id: 'h16',
+        text: 'What drives you more: the fear of remaining stagnant, the desire for something greater, the need to prove yourself, or curiosity about what\'s possible?',
+        answers: ['Fear of stagnation', 'Desire for something greater', 'Need to prove myself', 'Curiosity about possibilities']
+      },
+      {
+        id: 'h17',
+        text: 'If you could eliminate one source of suffering from your life, would it be: unfulfilled desires, painful memories, current limitations, or fear of the future?',
+        answers: ['Unfulfilled desires', 'Painful memories', 'Current limitations', 'Fear of the future']
+      },
+      {
+        id: 'h18',
+        text: 'What do you struggle with most: accepting love, giving love, believing you deserve love, or maintaining love?',
+        answers: ['Accepting love', 'Giving love', 'Believing I deserve it', 'Maintaining it']
+      },
+      {
+        id: 'h19',
+        text: 'When you feel envy of someone\'s life or achievements, what does it reveal about you?',
+        answers: ['What I truly want but haven\'t admitted', 'Where I feel inadequate', 'What I haven\'t yet pursued', 'What society tells me to want']
+      },
+      {
+        id: 'h20',
+        text: 'What would devastate you most: losing your purpose, losing your closest relationships, losing your health, or losing your freedom?',
+        answers: ['My purpose', 'My closest relationships', 'My health', 'My freedom']
+      },
+      {
+        id: 'h21',
+        text: 'If you could change how you experience one emotion, which would you choose: anger, sadness, fear, or shame?',
+        answers: ['Anger', 'Sadness', 'Fear', 'Shame']
+      },
+      {
+        id: 'h22',
+        text: 'What do you hide most: your desires, your fears, your needs, or your true opinions?',
+        answers: ['My desires', 'My fears', 'My needs', 'My true opinions']
+      },
+      {
+        id: 'h23',
+        text: 'When you imagine your ideal life, what\'s most prominent: what you\'re doing, who you\'re with, how you feel, or what you\'ve created?',
+        answers: ['What I\'m doing', 'Who I\'m with', 'How I feel', 'What I\'ve created']
+      },
+      {
+        id: 'h24',
+        text: 'What would require more courage from you: radical honesty, complete vulnerability, taking a big risk, or letting go of control?',
+        answers: ['Radical honesty', 'Complete vulnerability', 'Taking a big risk', 'Letting go of control']
+      },
+      {
+        id: 'h25',
+        text: 'What do you find hardest to forgive in yourself: past mistakes, missed opportunities, ways you\'ve hurt others, or who you\'ve been?',
+        answers: ['Past mistakes', 'Missed opportunities', 'Ways I\'ve hurt others', 'Who I\'ve been']
+      },
+      {
+        id: 'h26',
+        text: 'If you had to sacrifice one aspect of yourself, what would be most painful: your intellect, your emotions, your body, or your creativity?',
+        answers: ['My intellect', 'My emotions', 'My body', 'My creativity']
+      },
+      {
+        id: 'h27',
+        text: 'What do you seek most from life: meaning, pleasure, connection, or achievement?',
+        answers: ['Meaning', 'Pleasure', 'Connection', 'Achievement']
+      },
+      {
+        id: 'h28',
+        text: 'When you think about death, what concerns you most: the pain of dying, what you\'ll miss, being forgotten, or what comes after?',
+        answers: ['The pain of dying', 'What I\'ll miss', 'Being forgotten', 'What comes after']
+      },
+      {
+        id: 'h29',
+        text: 'What truth about yourself are you most reluctant to face: your limitations, your impact on others, your true desires, or your deepest fears?',
+        answers: ['My limitations', 'My impact on others', 'My true desires', 'My deepest fears']
+      },
+      {
+        id: 'h30',
+        text: 'If you could only save one aspect of who you are, what would it be: your memories, your relationships, your values, or your dreams?',
+        answers: ['My memories', 'My relationships', 'My values', 'My dreams']
+      },
+      {
+        id: 'h31',
+        text: 'What drives your hardest decisions: love, fear, ambition, or principle?',
+        answers: ['Love', 'Fear', 'Ambition', 'Principle']
+      },
+      {
+        id: 'h32',
+        text: 'When you feel truly alone, what do you yearn for most: understanding, companionship, validation, or simply presence?',
+        answers: ['Understanding', 'Companionship', 'Validation', 'Simply presence']
+      },
+      {
+        id: 'h33',
+        text: 'What would transformation require you to release: your identity, your comfort, your certainty, or your defenses?',
+        answers: ['My identity', 'My comfort', 'My certainty', 'My defenses']
+      },
+      {
+        id: 'h34',
+        text: 'What do you judge yourself most harshly for: your weaknesses, your choices, your feelings, or your thoughts?',
+        answers: ['My weaknesses', 'My choices', 'My feelings', 'My thoughts']
+      },
+      {
+        id: 'h35',
+        text: 'If you could guarantee one thing for your future, would it be: fulfillment, love, security, or freedom?',
+        answers: ['Fulfillment', 'Love', 'Security', 'Freedom']
+      },
     ]
   },
   
@@ -504,6 +805,106 @@ export const questions = {
         text: 'Immagina che ogni volta che bevi una tazza di caffè o tè, tu possa ricevere un piccolo \'bonus\' inaspettato. Preferiresti che fosse:',
         answers: ['Un lampo di geniale intuizione che ti risolve un problema o ti apre una nuova prospettiva.', 'Una sensazione di profonda serenità e chiarezza mentale che ti fa sentire completamente centrato/a.']
       },
+      {
+        id: 'e35',
+        text: 'Quando compi qualcosa di difficile, festeggi subito o passi alla prossima sfida?',
+        answers: ['Festeggio e assaporo il momento', 'Passo velocemente al prossimo obiettivo']
+      },
+      {
+        id: 'e36',
+        text: 'Se potessi padroneggiare istantaneamente un\'abilità artistica, sceglieresti:',
+        answers: ['Un\'arte visiva come pittura o scultura', 'Un\'arte performativa come musica o danza']
+      },
+      {
+        id: 'e37',
+        text: 'Quando pianifichi un viaggio, preferisci:',
+        answers: ['Ricercare ogni dettaglio e creare un itinerario strutturato', 'Prenotare l\'essenziale e improvvisare il resto']
+      },
+      {
+        id: 'e38',
+        text: 'Se trovassi soldi extra nel tuo budget, preferiresti:',
+        answers: ['Risparmiarli per sicurezza futura', 'Investirli in un\'esperienza o qualcosa di significativo ora']
+      },
+      {
+        id: 'e39',
+        text: 'Quando vedi qualcuno in difficoltà con qualcosa in cui sei bravo, il tuo istinto è:',
+        answers: ['Offrire aiuto immediatamente', 'Aspettare che chieda, rispettando la sua indipendenza']
+      },
+      {
+        id: 'e40',
+        text: 'In un progetto di gruppo, tendi naturalmente a:',
+        answers: ['Prendere la guida e coordinare', 'Contribuire con la tua parte e supportare le idee altrui']
+      },
+      {
+        id: 'e41',
+        text: 'Quando scopri una nuova canzone che ami, tu:',
+        answers: ['La ascolti in ripetizione finché non assorbi ogni dettaglio', 'La aggiungi a una playlist e la lasci venire naturalmente']
+      },
+      {
+        id: 'e42',
+        text: 'Se potessi passare un giorno con energia illimitata, vorresti:',
+        answers: ['Fare quante più attività ed esperienze possibili', 'Concentrarti profondamente su un progetto o esperienza significativa']
+      },
+      {
+        id: 'e43',
+        text: 'Quando cucini o prepari del cibo, tu:',
+        answers: ['Segui le ricette con precisione', 'Usi le ricette come ispirazione ma aggiusti secondo il tuo gusto']
+      },
+      {
+        id: 'e44',
+        text: 'Se dovessi scegliere tra due hobby, preferiresti:',
+        answers: ['Qualcosa che sfida la tua mente', 'Qualcosa che coinvolge il tuo corpo']
+      },
+      {
+        id: 'e45',
+        text: 'Quando entri in un nuovo ambiente, noti per primo:',
+        answers: ['Le persone e le dinamiche sociali', 'Lo spazio fisico e l\'atmosfera']
+      },
+      {
+        id: 'e46',
+        text: 'Se potessi cambiare un\'abitudine dall\'oggi al domani, sceglieresti:',
+        answers: ['Un\'abitudine che migliorerebbe la tua salute', 'Un\'abitudine che migliorerebbe la tua produttività']
+      },
+      {
+        id: 'e47',
+        text: 'Quando leggi un libro o guardi una serie, preferisci:',
+        answers: ['Storie che rispecchiano la vita reale e sembrano autentiche', 'Storie che ti portano in mondi completamente diversi']
+      },
+      {
+        id: 'e48',
+        text: 'Se avessi un pomeriggio libero senza obblighi, preferiresti:',
+        answers: ['Stare con persone, anche in modo casuale', 'Avere tempo completamente per te']
+      },
+      {
+        id: 'e49',
+        text: 'Quando hai bisogno di ricaricarti, preferisci:',
+        answers: ['Riposo attivo (esercizio leggero, passeggiate, attività creative)', 'Riposo completo (dormire, stare sdraiato, attività minima)']
+      },
+      {
+        id: 'e50',
+        text: 'Se potessi vivere in qualsiasi tipo di casa, sceglieresti:',
+        answers: ['Uno spazio accogliente e intimo che sembra un santuario personale', 'Un ambiente spazioso e aperto con spazio per crescere e ospitare']
+      },
+      {
+        id: 'e51',
+        text: 'Quando ricevi un complimento, la tua reazione tipica è:',
+        answers: ['Accettarlo con grazia e prenderlo a cuore', 'Deviarlo o minimizzarlo, sentendoti un po\' a disagio']
+      },
+      {
+        id: 'e52',
+        text: 'Se potessi concentrare il tuo apprendimento per il prossimo anno su un\'area, sceglieresti:',
+        answers: ['Approfondire qualcosa che già conosci', 'Esplorare qualcosa di completamente nuovo per te']
+      },
+      {
+        id: 'e53',
+        text: 'Quando organizzi il tuo spazio vitale, dai priorità a:',
+        answers: ['Funzionalità ed efficienza', 'Estetica ed espressione personale']
+      },
+      {
+        id: 'e54',
+        text: 'Se dovessi dare un consiglio al tuo io più giovane, ti concentreresti su:',
+        answers: ['Cose da fare diversamente', 'Cose da apprezzare e abbracciare']
+      },
     ],
     
     medium: [
@@ -581,7 +982,108 @@ export const questions = {
         id: 'm15',
         text: 'Cosa ti nutre di più: il silenzio o la conversazione profonda?',
         answers: ['Il silenzio', 'La conversazione profonda', 'Entrambi a seconda del momento']
-      }
+      },
+      {
+        id: 'm16',
+        text: 'Quando qualcuno performa meglio di te in qualcosa, cosa provi di più?',
+        answers: ['Felicità genuina per loro', 'Un pizzico di invidia che mi motiva a migliorare', 'Indifferenza, ognuno ha il proprio percorso']
+      },
+      {
+        id: 'm17',
+        text: 'Quando hai tempo libero e niente programmato, ti senti:',
+        answers: ['Irrequieto, in cerca di qualcosa da fare', 'Pacifico, godendoti il tempo non strutturato', 'Dipende dal mio livello di energia']
+      },
+      {
+        id: 'm18',
+        text: 'Qual è il tuo rapporto con il piacere fisico (buon cibo, comfort, relax)?',
+        answers: ['Lo abbraccio pienamente e senza scuse', 'Lo godo ma con moderazione', 'Spesso me lo nego per restare disciplinato']
+      },
+      {
+        id: 'm19',
+        text: 'Quando sei attratto da qualcuno, come rispondi tipicamente?',
+        answers: ['Agisco ed esprimo il mio interesse', 'Osservo e aspetto il momento giusto', 'Tendo a trattenermi per paura o cautela']
+      },
+      {
+        id: 'm20',
+        text: 'Trovi più facile perdonare gli altri o te stesso?',
+        answers: ['Gli altri', 'Me stesso', 'Né l\'uno né l\'altro viene facile']
+      },
+      {
+        id: 'm21',
+        text: 'Quando senti la rabbia montare, cosa fai?',
+        answers: ['La esprimo sul momento', 'Mi allontano e la elaboro da solo', 'La reprimo e vado avanti']
+      },
+      {
+        id: 'm22',
+        text: 'Come ti senti riguardo al chiedere aiuto quando ne hai bisogno?',
+        answers: ['Naturale e facile', 'Difficile ma lo faccio comunque', 'Lo evito il più possibile']
+      },
+      {
+        id: 'm23',
+        text: 'Quando prendi decisioni, cosa pesa di più:',
+        answers: ['Come mi influenza', 'Come influenza gli altri', 'Entrambi ugualmente']
+      },
+      {
+        id: 'm24',
+        text: 'Tendi a trattenere le cose (oggetti, ricordi, relazioni) o lasciarle andare facilmente?',
+        answers: ['Le trattengo', 'Le lascio andare facilmente', 'Dipende da cosa']
+      },
+      {
+        id: 'm25',
+        text: 'Quando qualcuno condivide una buona notizia con te, il tuo sentimento immediato è:',
+        answers: ['Gioia pura per loro', 'Gioia mista a confronto con la mia vita', 'Neutrale, concentrato sull\'essere di supporto']
+      },
+      {
+        id: 'm26',
+        text: 'Quanto ti senti a tuo agio nell\'essere al centro dell\'attenzione?',
+        answers: ['Mi piace', 'Lo tollero ma preferisco non esserlo', 'Lo evito attivamente']
+      },
+      {
+        id: 'm27',
+        text: 'Quando ti impegni in qualcosa, come lo affronti?',
+        answers: ['Intensità totale fino al completamento', 'Ritmo costante e consistente', 'A raffiche quando mi sento motivato']
+      },
+      {
+        id: 'm28',
+        text: 'Ti senti più vivo nei momenti di:',
+        answers: ['Eccitazione e intensità massima', 'Pace profonda e contentezza', 'Connessione significativa con gli altri']
+      },
+      {
+        id: 'm29',
+        text: 'Quando affronti i tuoi difetti, tu:',
+        answers: ['Li accetti come parte di chi sei', 'Lavori attivamente per cambiarli', 'Lotti tra accettazione e cambiamento']
+      },
+      {
+        id: 'm30',
+        text: 'Cosa ti spaventa di più delle relazioni:',
+        answers: ['Perdere la mia indipendenza', 'Non essere scelto o considerato priorità', 'La vulnerabilità richiesta']
+      },
+      {
+        id: 'm31',
+        text: 'Quando raggiungi il successo, lo attribuisci più a:',
+        answers: ['Il tuo sforzo e talento', 'Buona fortuna e tempismo', 'Aiuto e supporto dagli altri']
+      },
+      {
+        id: 'm32',
+        text: 'Come ti senti riguardo al tuo io passato?',
+        answers: ['Compassionevole e comprensivo', 'Critico degli errori commessi', 'Distante, come una persona diversa']
+      },
+      {
+        id: 'm33',
+        text: 'Quando qualcuno ti critica, cosa fa più male?',
+        answers: ['Se c\'è verità in quello che dice', 'Il modo in cui lo comunica', 'Che l\'abbia pensato']
+      },
+      {
+        id: 'm34',
+        text: 'Nei conflitti, dai priorità a:',
+        answers: ['Avere ragione', 'Essere compreso', 'Risolvere e andare avanti']
+      },
+      {
+        id: 'm35',
+        text: 'Quando guardi la traiettoria della tua vita, vedi:',
+        answers: ['Schemi e temi chiari', 'Eventi casuali che ti hanno plasmato', 'Scelte deliberate che portano da qualche parte']
+      },
+
     ],
 
     hard: [
@@ -659,7 +1161,107 @@ export const questions = {
         id: 'h15',
         text: 'Quando ti guardi allo specchio, cosa vedi di più: chi sei, chi vorresti essere, chi sei stato o chi gli altri vedono?',
         answers: ['Chi sono', 'Chi vorrei essere', 'Chi sono stato', 'Chi gli altri vedono']
-      }
+      },
+      {
+        id: 'h16',
+        text: 'Cosa ti spinge di più: la paura di rimanere stagnante, il desiderio di qualcosa di più grande, il bisogno di dimostrarti, o la curiosità su ciò che è possibile?',
+        answers: ['Paura della stagnazione', 'Desiderio di qualcosa di più grande', 'Bisogno di dimostrare me stesso', 'Curiosità sulle possibilità']
+      },
+      {
+        id: 'h17',
+        text: 'Se potessi eliminare una fonte di sofferenza dalla tua vita, sarebbe: desideri insoddisfatti, ricordi dolorosi, limitazioni attuali, o paura del futuro?',
+        answers: ['Desideri insoddisfatti', 'Ricordi dolorosi', 'Limitazioni attuali', 'Paura del futuro']
+      },
+      {
+        id: 'h18',
+        text: 'Con cosa lotti di più: accettare amore, dare amore, credere di meritare amore, o mantenere amore?',
+        answers: ['Accettare amore', 'Dare amore', 'Credere di meritarlo', 'Mantenerlo']
+      },
+      {
+        id: 'h19',
+        text: 'Quando provi invidia per la vita o i successi di qualcuno, cosa rivela di te?',
+        answers: ['Ciò che voglio veramente ma non ho ammesso', 'Dove mi sento inadeguato', 'Ciò che non ho ancora perseguito', 'Ciò che la società mi dice di volere']
+      },
+      {
+        id: 'h20',
+        text: 'Cosa ti devasterebbe di più: perdere il tuo scopo, perdere le tue relazioni più strette, perdere la tua salute, o perdere la tua libertà?',
+        answers: ['Il mio scopo', 'Le mie relazioni più strette', 'La mia salute', 'La mia libertà']
+      },
+      {
+        id: 'h21',
+        text: 'Se potessi cambiare come vivi un\'emozione, quale sceglieresti: rabbia, tristezza, paura, o vergogna?',
+        answers: ['Rabbia', 'Tristezza', 'Paura', 'Vergogna']
+      },
+      {
+        id: 'h22',
+        text: 'Cosa nascondi di più: i tuoi desideri, le tue paure, i tuoi bisogni, o le tue vere opinioni?',
+        answers: ['I miei desideri', 'Le mie paure', 'I miei bisogni', 'Le mie vere opinioni']
+      },
+      {
+        id: 'h23',
+        text: 'Quando immagini la tua vita ideale, cosa è più prominente: cosa stai facendo, con chi sei, come ti senti, o cosa hai creato?',
+        answers: ['Cosa sto facendo', 'Con chi sono', 'Come mi sento', 'Cosa ho creato']
+      },
+      {
+        id: 'h24',
+        text: 'Cosa richiederebbe più coraggio da te: onestà radicale, vulnerabilità completa, correre un grande rischio, o lasciare andare il controllo?',
+        answers: ['Onestà radicale', 'Vulnerabilità completa', 'Correre un grande rischio', 'Lasciare andare il controllo']
+      },
+      {
+        id: 'h25',
+        text: 'Cosa trovi più difficile perdonarti: errori passati, opportunità perse, modi in cui hai ferito altri, o chi sei stato?',
+        answers: ['Errori passati', 'Opportunità perse', 'Modi in cui ho ferito altri', 'Chi sono stato']
+      },
+      {
+        id: 'h26',
+        text: 'Se dovessi sacrificare un aspetto di te stesso, cosa sarebbe più doloroso: il tuo intelletto, le tue emozioni, il tuo corpo, o la tua creatività?',
+        answers: ['Il mio intelletto', 'Le mie emozioni', 'Il mio corpo', 'La mia creatività']
+      },
+      {
+        id: 'h27',
+        text: 'Cosa cerchi di più dalla vita: significato, piacere, connessione, o realizzazione?',
+        answers: ['Significato', 'Piacere', 'Connessione', 'Realizzazione']
+      },
+      {
+        id: 'h28',
+        text: 'Quando pensi alla morte, cosa ti preoccupa di più: il dolore del morire, ciò che ti mancherà, essere dimenticato, o ciò che viene dopo?',
+        answers: ['Il dolore del morire', 'Ciò che mi mancherà', 'Essere dimenticato', 'Ciò che viene dopo']
+      },
+      {
+        id: 'h29',
+        text: 'Quale verità su te stesso sei più riluttante ad affrontare: le tue limitazioni, il tuo impatto sugli altri, i tuoi veri desideri, o le tue paure più profonde?',
+        answers: ['Le mie limitazioni', 'Il mio impatto sugli altri', 'I miei veri desideri', 'Le mie paure più profonde']
+      },
+      {
+        id: 'h30',
+        text: 'Se potessi salvare solo un aspetto di chi sei, cosa sarebbe: i tuoi ricordi, le tue relazioni, i tuoi valori, o i tuoi sogni?',
+        answers: ['I miei ricordi', 'Le mie relazioni', 'I miei valori', 'I miei sogni']
+      },
+      {
+        id: 'h31',
+        text: 'Cosa guida le tue decisioni più difficili: amore, paura, ambizione, o principio?',
+        answers: ['Amore', 'Paura', 'Ambizione', 'Principio']
+      },
+      {
+        id: 'h32',
+        text: 'Quando ti senti veramente solo, cosa desideri di più: comprensione, compagnia, validazione, o semplicemente presenza?',
+        answers: ['Comprensione', 'Compagnia', 'Validazione', 'Semplicemente presenza']
+      },
+      {
+        id: 'h33',
+        text: 'Cosa richiederebbe la trasformazione che tu rilasci: la tua identità, il tuo comfort, la tua certezza, o le tue difese?',
+        answers: ['La mia identità', 'Il mio comfort', 'La mia certezza', 'Le mie difese']
+      },
+      {
+        id: 'h34',
+        text: 'Per cosa ti giudichi più duramente: le tue debolezze, le tue scelte, i tuoi sentimenti, o i tuoi pensieri?',
+        answers: ['Le mie debolezze', 'Le mie scelte', 'I miei sentimenti', 'I miei pensieri']
+      },
+      {
+        id: 'h35',
+        text: 'Se potessi garantire una cosa per il tuo futuro, sarebbe: realizzazione, amore, sicurezza, o libertà?',
+        answers: ['Realizzazione', 'Amore', 'Sicurezza', 'Libertà']
+      },
     ]
   }
 };

@@ -1,6 +1,7 @@
-// app/game/page.js
+// app/game/page.tsx
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useGameState } from '@/hooks/useGameState';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/locales/translations';
@@ -9,7 +10,12 @@ import Card from '@/components/Card';
 import Title from '@/components/Title';
 import Button from '@/components/Button';
 
-export default function GamePage() {
+// Previeni il rendering server-side per evitare hydration mismatch
+const GameContent = dynamic(() => Promise.resolve(GamePage), {
+  ssr: false,
+});
+
+function GamePage() {
   const { 
     gameState, 
     startLevel, 
@@ -252,4 +258,8 @@ export default function GamePage() {
   }
 
   return null;
+}
+
+export default function Page() {
+  return <GameContent />;
 }
