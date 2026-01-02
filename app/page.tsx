@@ -12,7 +12,7 @@ import Button from '@/components/Button';
 export default function Home() {
   const router = useRouter();
   const { language, toggleLanguage } = useLanguage();
-  const t = translations[language].home;
+  const t = translations[language as keyof typeof translations].home;
 
   return (
     <PageLayout>
