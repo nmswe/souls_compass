@@ -12,7 +12,7 @@ export default function QuestionPage() {
   const router = useRouter();
   const difficulty = searchParams.get('difficulty');
   
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
   const question = "Domanda X";
   const answers = [
@@ -22,7 +22,12 @@ export default function QuestionPage() {
     { id: 'D', text: 'Risposta D' }
   ];
 
-  const handleAnswerSelect = (answerId) => {
+  interface Answer {
+    id: string;
+    text: string;
+  }
+
+  const handleAnswerSelect = (answerId: string): void => {
     setSelectedAnswer(answerId);
     setTimeout(() => {
       console.log(`Selected answer: ${answerId}`);
