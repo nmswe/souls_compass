@@ -21,7 +21,7 @@ export default function GamePage() {
   } = useGameState();
 
   const { language } = useLanguage();
-  const t = translations[language].game;
+  const t = translations[language as keyof typeof translations].home;
 
   // Initial screen
   if (gameState.phase === 'waiting') {
