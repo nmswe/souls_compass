@@ -67,6 +67,16 @@ export default function Home() {
             {t.instructions}
           </Button>
         </div>
+
+        {/* Footer */}
+        <div className="mt-8 pt-6 border-t-2 border-[#E8D4B8] text-center">
+          <p className="text-sm text-[#4A4A5E]">
+            Created by <span className="font-semibold text-[#2D2D3F]">Nemanja Majstorovic</span>
+          </p>
+          <p className="text-xs text-[#4A4A5E] mt-1">
+            © 2025 All rights reserved
+          </p>
+        </div>
       </Card>
     </PageLayout>
   );

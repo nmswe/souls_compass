@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soul's Compass 🧭
 
-## Getting Started
+*"In the desert of souls, every encounter is a star"*
 
-First, run the development server:
+A connection game that tests how well two people truly know each other. Journey through 7 levels of increasing intimacy, from first Contact to Universal Affinity.
 
+## 🎮 How to Play
+
+Two players share one phone and take turns being the Guardian (who answers) and the Explorer (who guesses). Start with 3 lives and progress through 7 levels of connection by correctly guessing each other's answers.
+
+## ✨ Features
+
+- 🌍 **Bilingual**: Full support for English and Italian
+- 📱 **Mobile-first**: Optimized for phone gameplay
+- 🎨 **Beautiful UI**: Warm, inviting desert-inspired design
+- 🔄 **Dynamic questions**: Randomized selection for replayability
+- 💾 **Persistent language**: Remembers your language preference
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: JavaScript/React
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks + Context API
+- **Storage**: localStorage for language persistence
+
+## 🛠️ Installation
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/souls-compass.git
+
+# Navigate to project
+cd souls-compass
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to play.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
+```
+souls-compass/
+├── app/                  # Next.js app directory
+│   ├── page.js          # Home page
+│   ├── game/            # Game pages
+│   └── instructions/    # Instructions page
+├── components/          # Reusable components
+├── contexts/           # React contexts (Language)
+├── data/              # Questions and levels
+├── hooks/             # Custom hooks (useGameState)
+└── locales/          # Translation files
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Game Levels
 
-## Learn More
+0. **Contact** - The journey begins
+1. **Connection** - First steps toward understanding
+2. **Opening** - Sharing something deeper
+3. **Building** - Solid foundation of mutual knowledge
+4. **Attunement** - Increasingly aligned choices
+5. **Fusion** - Souls resonating together
+6. **Universal Affinity** - Perfect synchronization
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Translate to new languages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 License
 
-## Deploy on Vercel
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👤 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Nemanja Majstorovic**
+- LinkedIn: [https://www.linkedin.com/in/nemanja-majstorovic-b47302206/](#)
+- GitHub: [@nmswe](https://github.com/nmswe)
+
+## 🙏 Acknowledgments
+
+Built with passion as a portfolio project to showcase modern web development skills and create meaningful human connections.
+
+---
+
+*Made with ❤️ and ☕*
