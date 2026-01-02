@@ -80,7 +80,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Nemanja Majstorovic**
-- LinkedIn: [https://www.linkedin.com/in/nemanja-majstorovic-b47302206/](#)
+- [LinkedIn](https://www.linkedin.com/in/nemanja-majstorovic-b47302206/)
 - GitHub: [@nmswe](https://github.com/nmswe)
 
 ## 🙏 Acknowledgments
