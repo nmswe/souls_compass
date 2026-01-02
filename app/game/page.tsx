@@ -208,7 +208,7 @@ export default function GamePage() {
             level={gameState.currentLevel}
             className={isCorrect ? 'from-[#6B8E23] to-[#9ACD32]' : 'from-[#8B4513] to-[#A0522D]'}
           >
-            {isCorrect ? `✓ ${t.correct}` : `✗ ${t.notThisTime}`}
+            {isCorrect ? `✓ ${t.correctMessage}` : `✗ ${t.notThisTime}`}
           </Title>
           
           <div className="text-center mb-8">
@@ -230,7 +230,7 @@ export default function GamePage() {
                   <p className="text-2xl">{'❤️'.repeat(gameState.lives)}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-[#4A4A5E] mb-2">{t.correct}</p>
+                  <p className="text-sm text-[#4A4A5E] mb-2">{t.correctCount}</p>
                   <p className="text-2xl font-bold text-[#000000]">{gameState.correctAnswers}</p>
                 </div>
               </div>
