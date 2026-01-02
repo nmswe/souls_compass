@@ -1,7 +1,24 @@
 {
-  "name": "souls_compass",
-  "version": "0.1.0",
-  "private": true,
+  "name": "souls-compass",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A connection game that tests how well two people truly know each other. Journey through 7 levels of intimacy.",
+  "author": "Nemanja Majstorovic <nemanja.majstorovic.swe@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmswe/souls_compass.git"
+  },
+  "keywords": [
+    "game",
+    "connection",
+    "relationship",
+    "quiz",
+    "intimacy",
+    "nextjs",
+    "react",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
